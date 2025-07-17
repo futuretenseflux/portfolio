@@ -5,7 +5,6 @@ import Divider from '../components/Divider';
 import IntroLetter from './sections/about/About';
 import ProjectsContent from './sections/projects/Projects';
 import ResearchContent from './sections/research/Research';
-import WritingContent from './sections/writing/Writing';
 import LinksContent from './sections/links/Links';
 import styles from './Home.module.css';
 
@@ -64,7 +63,7 @@ const Home = () => {
       </Section>
       
       <div className={styles.footerImageContainer}>
-        <img src="/assets/5.webp" alt="Footer image" className={styles.footerImage} />
+        <img src="assets/5.webp" alt="Footer image" className={styles.footerImage} />
       </div>
     </div>
   );
