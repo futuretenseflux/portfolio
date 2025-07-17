@@ -1,0 +1,39 @@
+.linksContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.linksList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.linkItem {
+  margin-bottom: 1rem;
+}
+
+.link {
+  font-size: 3rem;
+  font-family: 'Doto', monospace;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.2s ease;
+}
+
+.link:hover {
+  opacity: 0.7;
+}
+
+.imageContainer {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.footerImage {
+  max-width: 100%;
+  height: auto;
+}

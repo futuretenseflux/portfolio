@@ -1,0 +1,21 @@
+.section {
+  width: 100%;
+  max-width: 1200px;
+  padding: 2rem;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-margin-top: 1rem;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 2.5rem;
+  font-family: 'Doto', monospace;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 800px;
+}

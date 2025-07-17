@@ -1,0 +1,42 @@
+.researchItem {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+}
+
+.researchHeader {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.researchTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.researchStatus {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.researchLink {
+  font-size: 0.9rem;
+  color: #4D6CFA;
+  text-decoration: underline;
+}
+
+.researchDescription {
+  margin-bottom: 0.75rem;
+}
+
+.keyPointsList {
+  list-style-type: square;
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.keyPointItem {
+  margin-bottom: 0.25rem;
+}
