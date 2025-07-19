@@ -2,7 +2,7 @@ const IntroLetter = () => {
   return (
     <div className="letter">
 <p>Greetings,</p>
-<p>I am a coder and budding researcher, known on X as @mindgardner_.</p>
+<p>I am a coder and aspiring researcher.</p>
 <p>Since my earliest days, the notion of machines that think has captivated my imagination.</p>
 <p>Advancing intelligence, both in scope and depth, is our surest path to unraveling the mysteries of existence.</p>
 <p>I may not be a Turing, von Neumann, or Shannon,</p>
