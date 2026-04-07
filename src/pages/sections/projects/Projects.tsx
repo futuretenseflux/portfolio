@@ -1,6 +1,8 @@
 import Project from './Project';
 
 const Projects = () => {
+  const baseUrl = import.meta.env.BASE_URL;
+
   const projectsList = [
     {
       title: "LLM From Scratch (0.5B + 1B)",
@@ -23,10 +25,10 @@ const Projects = () => {
       status: "Deployed",
       description: "An intelligent note-taking application with an inbuilt research/tutor agent that enhances knowledge management and learning experience.",
       images: [
-        "/assets/projects/notes/1.jpg",
-        "/assets/projects/notes/2.jpg",
-        "/assets/projects/notes/3.jpg",
-        "/assets/projects/notes/4.jpg"
+        `${baseUrl}assets/projects/notes/1.jpg`,
+        `${baseUrl}assets/projects/notes/2.jpg`,
+        `${baseUrl}assets/projects/notes/3.jpg`,
+        `${baseUrl}assets/projects/notes/4.jpg`
       ],
       features: [
         "Full stack development using ReactJS (front-end) and NestJS (back-end)",
@@ -40,7 +42,7 @@ const Projects = () => {
       status: "In Progress",
       description: "Platform to benchmark AI models through competitive evaluation in game arenas and simulations, providing standardized metrics for model performance.",
       images: [
-        "/assets/projects/arena/5.jpg"
+        `${baseUrl}assets/projects/arena/5.jpg`
       ],
       features: [
         "Competitive evaluation framework in game-theoretic environments",
@@ -66,7 +68,7 @@ const Projects = () => {
       status: "Alpha",
       description: "Autonomous system that processes all research papers published daily and generates personalized feeds based on researcher goals and interests.",
       images: [
-        "/assets/projects/rr/rr.jpg"
+        `${baseUrl}assets/projects/rr/rr.jpg`
       ],
       features: [
         "Automated paper collection across multiple journals and repositories",

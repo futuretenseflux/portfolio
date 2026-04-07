@@ -14,6 +14,8 @@ const Home = () => {
   const researchRef = useRef<HTMLElement>(null);
   const linksRef = useRef<HTMLElement>(null);
 
+  const baseUrl = import.meta.env.BASE_URL;
+
   const footerWaveY = 40;
   const footerWaveAmplitude = 4;
   const footerWaveSegmentWidth = 16;
@@ -107,7 +109,7 @@ const Home = () => {
           />
 
           <image
-            href="assets/foot3.jpeg"
+            href={`${baseUrl}assets/m1.jpg`}
             clipPath="url(#footerWaveClip)"
             width="1000"
             height="420"
