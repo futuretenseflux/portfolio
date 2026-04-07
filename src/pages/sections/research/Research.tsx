@@ -3,16 +3,16 @@ import ResearchProject from './ResearchProject';
 const Research = () => {
   const researchProjects = [
     {
-      title: "Formal Verification in Generated Reinforcement Learning Environments",
+      title: "Neural Network Latent-Space Reconstruction + Model Search",
       status: "Ongoing",
       link: undefined,
-      description: "Investigating methodologies for applying formal verification techniques to procedurally generated environments in reinforcement learning to ensure safety properties and behavioral guarantees across environment variations.",
+      description: "I am developing a model that can encode and reconstruct complex, arbitrary neural networks in a latent space, enabling principled latent-space transformations that reliably decode to valid networks. I’m exploring how these structured mutations can be leveraged for efficient model search.",
       keyPoints: [
-        "Developing mathematical frameworks for specifying invariant properties in dynamic RL environments",
-        "Exploring compositional verification approaches for environment generation rules",
-        "Implementing runtime monitoring systems for detecting safety violations during training",
-        "Creating benchmark suites for evaluating verification robustness across environment distributions",
-        "Analyzing theoretical bounds on verification completeness in non-deterministic settings"
+        "Learning representations that encode arbitrary neural network architectures and parameters",
+        "Reconstructing valid networks from latent embeddings with minimal loss in function",
+        "Designing latent-space mutations that preserve validity while enabling exploration",
+        "Using latent edits for efficient model search and architecture/weight optimization",
+        "Evaluating mutation operators for stability, diversity, and downstream performance"
       ]
     }
   ];

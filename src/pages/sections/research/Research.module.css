@@ -18,12 +18,12 @@
 
 .researchStatus {
   font-size: 0.9rem;
-  color: #333;
+  color: var(--color-text-muted);
 }
 
 .researchLink {
   font-size: 0.9rem;
-  color: #4D6CFA;
+  color: var(--color-link);
   text-decoration: underline;
 }
 

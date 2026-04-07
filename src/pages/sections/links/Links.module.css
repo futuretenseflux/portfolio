@@ -17,7 +17,7 @@
 
 .link {
   font-size: 3rem;
-  font-family: 'Doto', monospace;
+  font-family: 'JetBrains Mono', monospace;
   text-decoration: none;
   color: inherit;
   transition: opacity 0.2s ease;

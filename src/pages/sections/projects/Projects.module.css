@@ -22,12 +22,99 @@
 
 .projectLink {
   font-size: 0.9rem;
-  color: #4D6CFA;
+  color: var(--color-link);
   text-decoration: underline;
 }
 
 .projectDescription {
   margin-bottom: 0.75rem;
+}
+
+.projectImages {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 190px));
+  gap: 0.75rem;
+  margin: 0.75rem 0 0.75rem;
+  justify-content: start;
+}
+
+.projectThumb {
+  --tx: 0px;
+  --ty: 0px;
+  --s: 0.82;
+  --r: 0deg;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  display: block;
+  border-radius: 0;
+  overflow: visible;
+}
+
+.projectImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  object-fit: contain;
+  transition: transform 160ms ease, box-shadow 200ms ease;
+  transform: translate(var(--tx), var(--ty)) rotate(var(--r)) scale(var(--s));
+  transform-origin: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+}
+
+.projectThumb:hover .projectImage {
+  transform: translate(var(--tx), var(--ty)) rotate(var(--r)) scale(1);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
+}
+
+.lightboxOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.72);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.lightboxContent {
+  position: relative;
+  max-width: min(980px, 96vw);
+  max-height: 92vh;
+}
+
+.lightboxImage {
+  width: 100%;
+  height: auto;
+  max-height: 92vh;
+  object-fit: contain;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.lightboxClose {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(20, 20, 20, 0.75);
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  line-height: 1;
+  font-size: 24px;
+}
+
+.lightboxClose:hover {
+  background: rgba(30, 30, 30, 0.85);
 }
 
 .featuresList {

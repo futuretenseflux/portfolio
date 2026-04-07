@@ -14,6 +14,26 @@ const Home = () => {
   const researchRef = useRef<HTMLElement>(null);
   const linksRef = useRef<HTMLElement>(null);
 
+  const footerWaveY = 40;
+  const footerWaveAmplitude = 4;
+  const footerWaveSegmentWidth = 16;
+
+  const footerWavePath = (() => {
+    const width = 1000;
+    const segments = Math.ceil(width / footerWaveSegmentWidth);
+
+    let d = `M 0 ${footerWaveY}`;
+    for (let i = 0; i < segments; i++) {
+      const x1 = i * footerWaveSegmentWidth + footerWaveSegmentWidth / 2;
+      const y1 = i % 2 === 0 ? footerWaveY - footerWaveAmplitude : footerWaveY + footerWaveAmplitude;
+      const x2 = Math.min(width, (i + 1) * footerWaveSegmentWidth);
+      const y2 = footerWaveY;
+      d += ` Q ${x1} ${y1} ${x2} ${y2}`;
+    }
+
+    return d;
+  })();
+
   const scrollToSection = (section: string) => {
     switch(section) {
       case 'about':
@@ -63,7 +83,37 @@ const Home = () => {
       </Section>
       
       <div className={styles.footerImageContainer}>
-        <img src="assets/5.webp" alt="Footer image" className={styles.footerImage} />
+        <svg
+          className={styles.footerWaveSvg}
+          viewBox="0 0 1000 420"
+          preserveAspectRatio="none"
+          xmlns="http://www.w3.org/2000/svg"
+          role="presentation"
+          focusable="false"
+        >
+          <defs>
+            <clipPath id="footerWaveClip">
+              <path d={`${footerWavePath} L 1000 420 L 0 420 Z`} />
+            </clipPath>
+          </defs>
+
+          <path
+            className={styles.footerWavePath}
+            d={footerWavePath}
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="3"
+            strokeLinecap="round"
+          />
+
+          <image
+            href="assets/foot3.jpeg"
+            clipPath="url(#footerWaveClip)"
+            width="1000"
+            height="420"
+            preserveAspectRatio="xMidYMid slice"
+          />
+        </svg>
       </div>
     </div>
   );
